@@ -10,7 +10,7 @@ namespace GtkApplication
         {
             Application.Init();
 
-            var app = new Application("org.GtkApplication.GtkApplication", GLib.ApplicationFlags.None);
+            var app = new Application("org.Grasshoppers.Grasshoppers", GLib.ApplicationFlags.None);
             app.Register(GLib.Cancellable.Current);
 
             var win = new MainWindow();
