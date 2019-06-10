@@ -6,6 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <None Remove="**\*.glade" />
+        <EmbeddedResource Include="**\*.glade">
+            <LogicalName>%(Filename)%(Extension)</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+    
+    <ItemGroup>
       <PackageReference Include="GtkSharp" Version="3.22.24.37" />
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.4" />
