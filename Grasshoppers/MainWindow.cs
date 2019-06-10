@@ -46,5 +46,20 @@ namespace Grasshoppers
         {
             
         }
+
+        public void AddQuery(IQuery query)
+        {
+            _queriesList.Add(query);
+            
+            Queries_ComboBoxText.AppendText(query.Name);
+        }
+
+        public void AddRangeQuery(IEnumerable<IQuery> queries)
+        {
+            foreach (var cur in queries)
+            {
+                AddQuery(cur);
+            }
+        }
     }
 }
