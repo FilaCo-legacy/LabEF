@@ -13,10 +13,10 @@ namespace Grasshoppers
             var app = new Application("org.Grasshoppers.Grasshoppers", GLib.ApplicationFlags.None);
             app.Register(GLib.Cancellable.Current);
 
-            var win = new MainWindow();
+            var win = new MainWindow(new GrasshoppersQueryProvider());
             
             win.DeleteEvent += (sender, eventArgs) => {  Application.Quit(); };
-            
+
             app.AddWindow(win);
 
             win.Show();

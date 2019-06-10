@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using GLib;
 using Gtk;
 
@@ -7,9 +8,28 @@ namespace Grasshoppers
     internal partial class MainWindow : Window
     {
         private bool _savedChanges;
+
+        private IQueriesProvider _queriesProvider;
+
+        public IQueriesProvider QueriesProvider { get => _queriesProvider;
+            set
+            {
+                Queries_ComboBoxText.Clear();
+                var cellRendererText = new CellRendererText();
+               
+                Queries_ComboBoxText.PackStart(cellRendererText, true);
+                Queries_ComboBoxText.AddAttribute(cellRendererText,"text", 0);
+
+                foreach (var curQuery in value)
+                {
+                    Queries_ComboBoxText.AppendText(curQuery.Name);
+                }
+            }
+        }
         
-        public MainWindow() : this(new Builder("MainWindow.glade"))
+        public MainWindow(IQueriesProvider queriesProvider) : this(new Builder("MainWindow.glade"))
         {
+            QueriesProvider = queriesProvider;
             _savedChanges = true;
         }
 
@@ -26,7 +46,7 @@ namespace Grasshoppers
         
         private void QuitMenuItem_OnActivated(object sender, EventArgs e)
         {
-            Close();
+            Destroy();
         }
         
         private void ConnDBMenuItem_OnActivated(object sender, EventArgs e)

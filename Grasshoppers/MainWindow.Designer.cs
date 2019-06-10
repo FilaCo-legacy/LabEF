@@ -32,7 +32,7 @@ namespace Grasshoppers
 
         #endregion
 
-        [UI] private ComboBox Queries_ComboBox;
+        [UI] private ComboBoxText Queries_ComboBoxText;
 
         [UI] private Button Execute_Button;
         

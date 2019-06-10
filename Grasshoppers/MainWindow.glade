@@ -242,7 +242,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkComboBox" id="QueriesList_ComboBox">
+                  <object class="GtkComboBoxText" id="Queries_ComboBoxText">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                   </object>
