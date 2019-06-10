@@ -1,46 +1,301 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.1 -->
 <interface>
-  <requires lib="gtk+" version="3.18"/>
-  <object class="GtkWindow" id="MainWindow">
+  <requires lib="gtk+" version="3.20"/>
+  <object class="GtkApplicationWindow" id="MainWindow_ApplicationWindow">
     <property name="can_focus">False</property>
-    <property name="title" translatable="yes">Example Window</property>
-    <property name="default_width">480</property>
-    <property name="default_height">240</property>
     <child>
-      <object class="GtkBox">
+      <placeholder/>
+    </child>
+    <child>
+      <object class="GtkBox" id="MainBox_Box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="margin_left">4</property>
-        <property name="margin_right">4</property>
-        <property name="margin_top">4</property>
-        <property name="margin_bottom">4</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkLabel" id="_label1">
+          <object class="GtkMenuBar" id="MainMenuBar_MenuBar">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="label" translatable="yes">Hello World!</property>
+            <child>
+              <object class="GtkMenuItem" id="AppItem_MenuItem">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">_Application</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="AppMenu_Menu">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkImageMenuItem" id="ConnDBItem_MenuItem">
+                        <property name="label" translatable="yes">Connect to Database...</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_stock">False</property>
+                        <property name="always_show_image">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="DisconnDBItem_MenuItem">
+                        <property name="label" translatable="yes">Disconnect from Database</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_stock">False</property>
+                        <property name="always_show_image">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="SaveChangesItem_MenuItem">
+                        <property name="label" translatable="yes">Save changes to Database</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_stock">False</property>
+                        <property name="always_show_image">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="QuitItem_MenuItem">
+                        <property name="label">gtk-quit</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="use_underline">True</property>
+                        <property name="use_stock">True</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
           <packing>
-            <property name="expand">True</property>
+            <property name="expand">False</property>
             <property name="fill">True</property>
             <property name="position">0</property>
           </packing>
         </child>
         <child>
-          <object class="GtkButton" id="_button1">
-            <property name="label" translatable="yes">Click me!</property>
+          <object class="GtkNotebook" id="EntitiesTabControl">
             <property name="visible">True</property>
-            <property name="can_focus">False</property>
-            <property name="receives_default">True</property>
+            <property name="can_focus">True</property>
+            <property name="border_width">10</property>
+            <property name="scrollable">True</property>
+            <child>
+              <object class="GtkTreeView" id="CharactersView_TreeView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="tab_expand">True</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="Characters_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Characters</property>
+              </object>
+              <packing>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTreeView" id="ItemsView_TreeView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_expand">True</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="Items_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Items</property>
+              </object>
+              <packing>
+                <property name="position">1</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTreeView" id="GameSessionsView_TreeView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab_expand">True</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="GameSessions_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">GameSessions</property>
+              </object>
+              <packing>
+                <property name="position">2</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTreeView" id="MissionsView_TreeView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab_expand">True</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="Missions_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Missions</property>
+              </object>
+              <packing>
+                <property name="position">3</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkTreeView" id="CharactersResultsView_TreeView">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="enable_grid_lines">both</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection"/>
+                </child>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab_expand">True</property>
+              </packing>
+            </child>
+            <child type="tab">
+              <object class="GtkLabel" id="CharactersResults_Label">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">CharactersResults</property>
+              </object>
+              <packing>
+                <property name="position">4</property>
+                <property name="tab_fill">False</property>
+              </packing>
+            </child>
           </object>
           <packing>
-            <property name="expand">False</property>
+            <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">1</property>
           </packing>
         </child>
+        <child>
+          <object class="GtkBox" id="QueryActions_Box">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="border_width">10</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkBox" id="ChooseQuery_Box">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_right">5</property>
+                <child>
+                  <object class="GtkLabel" id="Query_Label">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="margin_left">5</property>
+                    <property name="margin_right">5</property>
+                    <property name="label" translatable="yes">Query:</property>
+                    <property name="ellipsize">end</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkComboBox" id="Queries_List">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="Execute_Button">
+                <property name="label" translatable="yes">Execute</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="margin_left">5</property>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
       </object>
     </child>
+  </object>
+  <object class="GtkImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-connect</property>
+  </object>
+  <object class="GtkImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-disconnect</property>
+  </object>
+  <object class="GtkImage">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-save</property>
   </object>
 </interface>
