@@ -6,17 +6,7 @@ namespace Grasshoppers
 {
     internal partial class MainWindow
     {
-        #region AppMenuItems
-        
-        [UI] private MenuItem ConnectDB_MenuItem;
-
-        [UI] private MenuItem DisconnectDB_MenuItem;
-
-        [UI] private MenuItem SaveChanges_MenuItem;
-
         [UI] private MenuItem Quit_MenuItem;
-
-        #endregion
 
         #region TreeViews
         
@@ -39,9 +29,6 @@ namespace Grasshoppers
         private void InitializeComponents()
         {
             Quit_MenuItem.Activated += QuitMenuItem_OnActivated;
-            SaveChanges_MenuItem.Activated += SaveChangesMenuItem_OnActivated;
-            ConnectDB_MenuItem.Activated += ConnectDBMenuItem_OnActivated;
-            DisconnectDB_MenuItem.Activated += DisconnectDBMenuItem_OnActivated;
 
             Execute_Button.Clicked += ExecuteButton_OnClicked;
 

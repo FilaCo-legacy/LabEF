@@ -45,5 +45,11 @@ namespace Grasshoppers {
                 resourceCulture = value;
             }
         }
+        
+        internal static string InventoryGrasshoppersQuery_Name {
+            get {
+                return ResourceManager.GetString("InventoryGrasshoppersQuery_Name", resourceCulture);
+            }
+        }
     }
 }
