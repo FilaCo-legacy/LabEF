@@ -2,9 +2,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
-    public class PlayerConfiguration : IEntityTypeConfiguration <Character>
+    public class CharacterConfiguration : IEntityTypeConfiguration <Character>
     {
         public void Configure(EntityTypeBuilder<Character> builder)
         {

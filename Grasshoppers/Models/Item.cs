@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     /// <summary>
     /// Represents an item in the database

@@ -2,7 +2,7 @@ using System;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
 
-namespace GtkApplication
+namespace Grasshoppers
 {
     class MainWindow : Window
     {

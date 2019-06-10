@@ -1,7 +1,8 @@
 using System;
 using Gtk;
+using GtkApplication;
 
-namespace GtkApplication
+namespace Grasshoppers
 {
     class Program
     {

@@ -1,8 +1,7 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     public class CharacterResultEntryConfiguration : IEntityTypeConfiguration <CharacterResultEntry>
     {

@@ -1,12 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using WebApp.Models;
 
-namespace GtkApplication.Models
+namespace Grasshoppers.Models
 {
     public sealed class GrasshoppersContext : DbContext
     {
-        private readonly DbContextOptions<GrasshoppersContext> _options;
-        
         public DbSet<InventoryEntry> Inventories { get; set; }
         
         public DbSet <Item> Items { get; set; }
@@ -19,17 +16,20 @@ namespace GtkApplication.Models
         
         public DbSet<CharacterResultEntry> CharactersResults { get; set; }
         
-        public GrasshoppersContext(DbContextOptions<GrasshoppersContext> options)
-            : base(options)
+        public GrasshoppersContext()
         {
-            _options = options;
             Database.EnsureCreated();
         }
-        
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=EFLabDB;Username=filaco;Password=gehunu94");
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
-            modelBuilder.ApplyConfiguration(new PlayerConfiguration());
+            modelBuilder.ApplyConfiguration(new CharacterConfiguration());
             modelBuilder.ApplyConfiguration(new MissionConfiguration());
             modelBuilder.ApplyConfiguration(new CharacterResultEntryConfiguration());
             

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     /// <summary>
     /// Represents info about some game session in the database

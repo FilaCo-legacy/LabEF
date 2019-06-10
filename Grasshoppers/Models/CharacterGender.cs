@@ -1,4 +1,4 @@
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     public enum PlayerGender
     {

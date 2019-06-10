@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     /// <summary>
     /// Represents information about participator results in some <see cref="GameSession"/>

@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     /// <summary>
     /// Represents a character of some user in database

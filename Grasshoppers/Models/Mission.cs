@@ -1,7 +1,6 @@
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace WebApp.Models
+namespace Grasshoppers.Models
 {
     /// <summary>
     /// Represents an info about mission in the database

@@ -1,28 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <TargetFramework>netcoreapp2.2</TargetFramework>
         <OutputType>WinExe</OutputType>
-        <TargetFramework>netcoreapp2.0</TargetFramework>
-        <RootNamespace>GtkApplication</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="**\*.glade" />
-        <EmbeddedResource Include="**\*.glade">
-            <LogicalName>%(Filename)%(Extension)</LogicalName>
-        </EmbeddedResource>
+      <PackageReference Include="GtkSharp" Version="3.22.24.37" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.4" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.2.4" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="GtkSharp" Version="3.22.24.*" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0-preview5.19227.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0-preview5.19227.1" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.0.0-preview5" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Compile Update="Models\MissionConfiguration.cs">
-        <DependentUpon>Mission.cs</DependentUpon>
+      <Compile Update="Models\CharacterConfiguration.cs">
+        <DependentUpon>Character.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Models\CharacterGender.cs">
+        <DependentUpon>Character.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Models\CharacterResultEntryConfiguration.cs">
+        <DependentUpon>CharacterResultEntry.cs</DependentUpon>
       </Compile>
       <Compile Update="Models\ItemConfiguration.cs">
         <DependentUpon>Item.cs</DependentUpon>
@@ -30,14 +28,8 @@
       <Compile Update="Models\ItemRarity.cs">
         <DependentUpon>Item.cs</DependentUpon>
       </Compile>
-      <Compile Update="Models\CharacterResultEntryConfiguration.cs">
-        <DependentUpon>CharacterResultEntry.cs</DependentUpon>
-      </Compile>
-      <Compile Update="Models\CharacterGender.cs">
-        <DependentUpon>Character.cs</DependentUpon>
-      </Compile>
-      <Compile Update="Models\CharacterConfiguration.cs">
-        <DependentUpon>Character.cs</DependentUpon>
+      <Compile Update="Models\MissionConfiguration.cs">
+        <DependentUpon>Mission.cs</DependentUpon>
       </Compile>
     </ItemGroup>
 
