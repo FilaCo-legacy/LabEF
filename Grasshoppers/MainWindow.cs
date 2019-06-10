@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using GLib;
 using Gtk;
@@ -9,27 +10,11 @@ namespace Grasshoppers
     {
         private bool _savedChanges;
 
-        private IQueriesProvider _queriesProvider;
+        private IList<IQuery> _queriesList;
 
-        public IQueriesProvider QueriesProvider { get => _queriesProvider;
-            set
-            {
-                Queries_ComboBoxText.Clear();
-                var cellRendererText = new CellRendererText();
-               
-                Queries_ComboBoxText.PackStart(cellRendererText, true);
-                Queries_ComboBoxText.AddAttribute(cellRendererText,"text", 0);
-
-                foreach (var curQuery in value)
-                {
-                    Queries_ComboBoxText.AppendText(curQuery.Name);
-                }
-            }
-        }
-        
-        public MainWindow(IQueriesProvider queriesProvider) : this(new Builder("MainWindow.glade"))
+        public MainWindow() : this(new Builder("MainWindow.glade"))
         {
-            QueriesProvider = queriesProvider;
+            _queriesList = new List<IQuery>();
             _savedChanges = true;
         }
 
@@ -49,11 +34,11 @@ namespace Grasshoppers
             Destroy();
         }
         
-        private void ConnDBMenuItem_OnActivated(object sender, EventArgs e)
+        private void ConnectDBMenuItem_OnActivated(object sender, EventArgs e)
         {
         }
         
-        private void DisconnDBMenuItem_OnActivated(object sender, EventArgs e)
+        private void DisconnectDBMenuItem_OnActivated(object sender, EventArgs e)
         {
         }
         

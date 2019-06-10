@@ -27,7 +27,7 @@
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <child>
-                      <object class="GtkImageMenuItem" id="ConnDB_MenuItem">
+                      <object class="GtkImageMenuItem" id="ConnectDB_MenuItem">
                         <property name="label" translatable="yes">Connect to Database...</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -36,7 +36,7 @@
                       </object>
                     </child>
                     <child>
-                      <object class="GtkImageMenuItem" id="DisconnDB_MenuItem">
+                      <object class="GtkImageMenuItem" id="DisconnectDB_MenuItem">
                         <property name="label" translatable="yes">Disconnect from Database</property>
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>

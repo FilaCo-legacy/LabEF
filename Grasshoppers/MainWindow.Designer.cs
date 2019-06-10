@@ -8,9 +8,9 @@ namespace Grasshoppers
     {
         #region AppMenuItems
         
-        [UI] private MenuItem ConnDB_MenuItem;
+        [UI] private MenuItem ConnectDB_MenuItem;
 
-        [UI] private MenuItem DisconnDB_MenuItem;
+        [UI] private MenuItem DisconnectDB_MenuItem;
 
         [UI] private MenuItem SaveChanges_MenuItem;
 
@@ -40,10 +40,22 @@ namespace Grasshoppers
         {
             Quit_MenuItem.Activated += QuitMenuItem_OnActivated;
             SaveChanges_MenuItem.Activated += SaveChangesMenuItem_OnActivated;
-            ConnDB_MenuItem.Activated += ConnDBMenuItem_OnActivated;
-            DisconnDB_MenuItem.Activated += DisconnDBMenuItem_OnActivated;
+            ConnectDB_MenuItem.Activated += ConnectDBMenuItem_OnActivated;
+            DisconnectDB_MenuItem.Activated += DisconnectDBMenuItem_OnActivated;
 
             Execute_Button.Clicked += ExecuteButton_OnClicked;
+
+            var cellText = new CellRendererText();
+            
+            Queries_ComboBoxText.PackStart(cellText, false);
+            Queries_ComboBoxText.AddAttribute(cellText, "text", 0);
+        }
+
+        protected override void OnDestroyed()
+        {
+            Application.Quit();
+            
+            base.OnDestroyed();
         }
     }
 }

@@ -4,6 +4,10 @@ namespace Grasshoppers.Models
 {
     public sealed class GrasshoppersContext : DbContext
     {
+        private static readonly GrasshoppersContext _instance = new GrasshoppersContext();
+
+        public static GrasshoppersContext Access => _instance;
+        
         public DbSet<InventoryEntry> Inventories { get; set; }
         
         public DbSet <Item> Items { get; set; }
@@ -16,7 +20,7 @@ namespace Grasshoppers.Models
         
         public DbSet<CharacterResultEntry> CharactersResults { get; set; }
         
-        public GrasshoppersContext()
+        private GrasshoppersContext()
         {
             Database.EnsureCreated();
         }
