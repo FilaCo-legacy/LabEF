@@ -14,6 +14,9 @@ namespace Grasshoppers
             app.Register(GLib.Cancellable.Current);
 
             var win = new MainWindow();
+            
+            win.DeleteEvent += (sender, eventArgs) => {  Application.Quit(); };
+            
             app.AddWindow(win);
 
             win.Show();

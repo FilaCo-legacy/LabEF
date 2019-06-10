@@ -80,7 +80,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkNotebook" id="EntitiesTabControl">
+          <object class="GtkNotebook" id="EntitiesTabs_Notebook">
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="border_width">10</property>
@@ -242,7 +242,7 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkComboBox" id="Queries_List">
+                  <object class="GtkComboBox" id="QueriesList_ComboBox">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                   </object>
