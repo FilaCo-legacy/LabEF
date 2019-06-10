@@ -20,5 +20,7 @@ namespace Grasshoppers.Models
         public int? StunnedPlayers { get; set; }
         
         public int? CapturedFlags { get; set; }
+        
+        public int? Team { get; set; }
     }
 }

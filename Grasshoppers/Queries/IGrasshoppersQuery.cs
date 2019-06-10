@@ -4,7 +4,7 @@ namespace Grasshoppers.Queries
 {
     public interface IGrasshoppersQuery
     {
-        string Name { get; set; }
+        string Name { get; }
         
         ITreeModel Execute();
     }
