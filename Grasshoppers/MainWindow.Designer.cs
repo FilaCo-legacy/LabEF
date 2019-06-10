@@ -8,39 +8,42 @@ namespace Grasshoppers
     {
         #region AppMenuItems
         
-        [UI] private MenuItem ConnDBItem_MenuItem;
+        [UI] private MenuItem ConnDB_MenuItem;
 
-        [UI] private MenuItem DisconnDBItem_MenuItem;
+        [UI] private MenuItem DisconnDB_MenuItem;
 
-        [UI] private MenuItem SaveChangesItem_MenuItem;
+        [UI] private MenuItem SaveChanges_MenuItem;
 
-        [UI] private MenuItem QuitItem_MenuItem;
+        [UI] private MenuItem Quit_MenuItem;
 
         #endregion
 
         #region TreeViews
         
-        [UI] private TreeView CharactersView_TreeView;
+        [UI] private TreeView Characters_TreeView;
         
-        [UI] private TreeView ItemsView_TreeView;
+        [UI] private TreeView Items_TreeView;
 
-        [UI] private TreeView GameSessionsView_TreeView;
+        [UI] private TreeView GameSessions_TreeView;
 
-        [UI] private TreeView MissionsView_TreeView;
+        [UI] private TreeView Missions_TreeView;
 
-        [UI] private TreeView CharactersResultsView_TreeView;
+        [UI] private TreeView CharactersResults_TreeView;
 
         #endregion
 
-        [UI] private ComboBox QueriesList_ComboBox;
+        [UI] private ComboBox Queries_ComboBox;
 
         [UI] private Button Execute_Button;
         
         private void InitializeComponents()
         {
-            QuitItem_MenuItem.Activated += QuitItem_OnActivate;
-            
-            
+            Quit_MenuItem.Activated += QuitMenuItem_OnActivated;
+            SaveChanges_MenuItem.Activated += SaveChangesMenuItem_OnActivated;
+            ConnDB_MenuItem.Activated += ConnDBMenuItem_OnActivated;
+            DisconnDB_MenuItem.Activated += DisconnDBMenuItem_OnActivated;
+
+            Execute_Button.Clicked += ExecuteButton_OnClicked;
         }
     }
 }
