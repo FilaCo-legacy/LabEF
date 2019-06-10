@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using GLib;
+using Grasshoppers.Queries;
 using Gtk;
 
 namespace Grasshoppers
@@ -10,11 +11,11 @@ namespace Grasshoppers
     {
         private bool _savedChanges;
 
-        private IList<IQuery> _queriesList;
+        private IList<IGrasshoppersQuery> _queriesList;
 
         public MainWindow() : this(new Builder("MainWindow.glade"))
         {
-            _queriesList = new List<IQuery>();
+            _queriesList = new List<IGrasshoppersQuery>();
             _savedChanges = true;
         }
 
@@ -47,14 +48,14 @@ namespace Grasshoppers
             
         }
 
-        public void AddQuery(IQuery query)
+        public void AddQuery(IGrasshoppersQuery query)
         {
             _queriesList.Add(query);
             
             Queries_ComboBoxText.AppendText(query.Name);
         }
 
-        public void AddRangeQuery(IEnumerable<IQuery> queries)
+        public void AddRangeQuery(IEnumerable<IGrasshoppersQuery> queries)
         {
             foreach (var cur in queries)
             {
