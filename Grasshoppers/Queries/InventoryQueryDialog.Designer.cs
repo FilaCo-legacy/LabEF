@@ -4,7 +4,7 @@ using UI = Gtk.Builder.ObjectAttribute;
 
 namespace Grasshoppers.Queries
 {
-    public partial class InventoryQueryDialog
+    public partial class InventoryGrQueryDialog
     {
         
         

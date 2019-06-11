@@ -9,11 +9,11 @@ namespace Grasshoppers
 {
     internal partial class MainWindow : Window
     {
-        private readonly IList<IQuery> _queriesList;
+        private readonly IList<IGrQueryProvider> _queriesList;
 
         public MainWindow() : this(new Builder("MainWindow.glade"))
         {
-            _queriesList = new List<IQuery>();
+            _queriesList = new List<IGrQueryProvider>();
         }
 
         private MainWindow(Builder builder) : base(builder.GetObject("Main_ApplicationWindow").Handle)
@@ -31,21 +31,21 @@ namespace Grasshoppers
         {
             if (_queriesList.Count == 0) return;
             
-            _queriesList[Queries_ComboBoxText.Active].Execute();
+            _queriesList[Queries_ComboBoxText.Active].GetResult();
         }
 
-        public void AddQuery(IQuery query)
+        public void AddQueryProvider(IGrQueryProvider queryProvider)
         {
-            _queriesList.Add(query);
+            _queriesList.Add(queryProvider);
             
-            Queries_ComboBoxText.AppendText(query.Name);
+            Queries_ComboBoxText.AppendText(queryProvider.Query.Name);
         }
 
-        public void AddRangeQuery(IEnumerable<IQuery> queries)
+        public void AddRangeQueryProviders(IEnumerable<IGrQueryProvider> queryProviders)
         {
-            foreach (var cur in queries)
+            foreach (var cur in queryProviders)
             {
-                AddQuery(cur);
+                AddQueryProvider(cur);
             }
         }
     }

@@ -2,8 +2,10 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public interface IQueryResult
+    public interface IGrQueryProvider
     {
+        IQuery Query { get; }
+        
         TreeView GetResult();
     }
 }
