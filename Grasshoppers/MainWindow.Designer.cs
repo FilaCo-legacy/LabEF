@@ -25,6 +25,20 @@ namespace Grasshoppers
         [UI] private ComboBoxText Queries_ComboBoxText;
 
         [UI] private Button Execute_Button;
+
+        #region ContextMenus
+
+        private Gtk.Menu Characters_Menu;
+        
+        private Gtk.Menu Items_Menu;
+        
+        private Gtk.Menu GameSessions_Menu;
+        
+        private Gtk.Menu Missions_Menu;
+        
+        private Gtk.Menu CharactersResults_Menu;
+
+        #endregion
         
         private void InitializeComponents()
         {
@@ -36,6 +50,36 @@ namespace Grasshoppers
             
             Queries_ComboBoxText.PackStart(cellText, false);
             Queries_ComboBoxText.AddAttribute(cellText, "text", 0);
+
+            Characters_TreeView.ButtonPressEvent += CharactersTreeView_OnButtonPressed;
+            
+            Items_TreeView.ButtonPressEvent += ItemsTreeView_OnButtonPressed;
+            
+            GameSessions_TreeView.ButtonPressEvent += GameSessionsTreeView_OnButtonPressed;
+            
+            Missions_TreeView.ButtonPressEvent += MissionsTreeView_OnButtonPressed;
+            
+            CharactersResults_TreeView.ButtonPressEvent += CharactersResultsTreeView_OnButtonPressed;
+            
+            InitializeContextMenus();
+        }
+
+        private void InitializeContextMenus()
+        {
+            Characters_Menu = new Menu(); 
+            Characters_Menu.Add(new MenuItem("Add"));
+            
+            Items_Menu = new Menu(); 
+            Items_Menu.Add(new MenuItem("Add"));
+            
+            GameSessions_Menu = new Menu();
+            GameSessions_Menu.Add(new MenuItem("Add"));
+            
+            Missions_Menu = new Menu();
+            Missions_Menu.Add(new MenuItem("Add"));
+            
+            CharactersResults_Menu = new Menu();
+            CharactersResults_Menu.Add(new MenuItem("Add"));
         }
 
         protected override void OnDestroyed()

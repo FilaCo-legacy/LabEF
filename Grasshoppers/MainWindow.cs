@@ -33,7 +33,52 @@ namespace Grasshoppers
             
             _queriesList[Queries_ComboBoxText.Active].GetResult();
         }
+        
+        [ConnectBefore]
+        private void CharactersTreeView_OnButtonPressed(object sender, ButtonPressEventArgs e)
+        {
+            if (e.Event.Button != 3) return;
+            
+            Characters_Menu.ShowAll();
+            Characters_Menu.Popup();
+        }
 
+        [ConnectBefore]
+        private void ItemsTreeView_OnButtonPressed(object sender, ButtonPressEventArgs e)
+        {
+            if (e.Event.Button != 3) return;
+            
+            Items_Menu.ShowAll();
+            Items_Menu.Popup();
+        }
+        
+        [ConnectBefore]
+        private void MissionsTreeView_OnButtonPressed(object sender, ButtonPressEventArgs e)
+        {
+            if (e.Event.Button != 3) return;
+            
+            Missions_Menu.ShowAll();
+            Missions_Menu.Popup();
+        }
+        
+        [ConnectBefore]
+        private void GameSessionsTreeView_OnButtonPressed(object sender, ButtonPressEventArgs e)
+        {
+            if (e.Event.Button != 3) return;
+            
+            GameSessions_Menu.ShowAll();
+            GameSessions_Menu.Popup();
+        }
+        
+        [ConnectBefore]
+        private void CharactersResultsTreeView_OnButtonPressed(object sender, ButtonPressEventArgs e)
+        {
+            if (e.Event.Button != 3) return;
+            
+            CharactersResults_Menu.ShowAll();
+            CharactersResults_Menu.Popup();
+        }
+        
         public void AddQueryProvider(IGrQueryProvider queryProvider)
         {
             _queriesList.Add(queryProvider);

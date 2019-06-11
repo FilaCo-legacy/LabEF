@@ -2,18 +2,18 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public partial class InventoryQueryDialog : Dialog, IGrQueryProvider
+    public partial class InventoryQuery_Dialog : Dialog, IGrQueryProvider
     {
         private readonly InventoryQuery _query;
 
         public IQuery Query => _query;
         
-        public InventoryQueryDialog() : this(new Builder("InventoryQueryDialog.glade"))
+        public InventoryQuery_Dialog() : this(new Builder("InventoryQuery_Dialog.glade"))
         {
             _query = new InventoryQuery();
         }
 
-        private InventoryQueryDialog(Builder builder) : base(builder.GetObject("InventoryQuery_Dialog").Handle)
+        private InventoryQuery_Dialog(Builder builder) : base(builder.GetObject("InventoryQuery_Dialog").Handle)
         {
             builder.Autoconnect(this);
             InitializeComponents();

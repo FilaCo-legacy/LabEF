@@ -1,6 +1,6 @@
 namespace Grasshoppers.Models
 {
-    public enum PlayerGender
+    public enum CharacterGender
     {
         Man,
         Woman

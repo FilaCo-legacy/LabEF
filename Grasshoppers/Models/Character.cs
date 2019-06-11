@@ -27,7 +27,7 @@ namespace Grasshoppers.Models
         public string Name { get; set; }
         
         [Required]
-        public PlayerGender Gender { get; set; }
+        public CharacterGender Gender { get; set; }
         
         /// <summary>
         /// Last time when user quit this character

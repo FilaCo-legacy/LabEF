@@ -13,7 +13,7 @@ namespace Grasshoppers.Models
             builder
                 .Property(player => player.Gender)
                 .HasConversion(property => property.ToString(),
-                    property => (PlayerGender) Enum.Parse(typeof(PlayerGender), property));
+                    property => (CharacterGender) Enum.Parse(typeof(CharacterGender), property));
         }
     }
 }
