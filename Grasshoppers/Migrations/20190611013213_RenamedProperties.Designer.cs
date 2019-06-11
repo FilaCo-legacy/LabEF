@@ -3,15 +3,17 @@ using System;
 using Grasshoppers.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Grasshoppers.Migrations
 {
     [DbContext(typeof(GrasshoppersContext))]
-    partial class GrasshoppersContextModelSnapshot : ModelSnapshot
+    [Migration("20190611013213_RenamedProperties")]
+    partial class RenamedProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

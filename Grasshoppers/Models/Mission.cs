@@ -16,7 +16,7 @@ namespace Grasshoppers.Models
         /// A number of <see cref="Character"/>s that this<see cref="Mission"/> requires
         /// </summary>
         [Required]
-        public int RequiredPlayersNumber { get; set; }
+        public int RequiredParticipatorsNumber { get; set; }
         
         /// <summary>
         /// A number of stunned <see cref="Character"/>s that participators have to get

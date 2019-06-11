@@ -17,7 +17,7 @@ namespace Grasshoppers.Models
         [ForeignKey("GameSessionId")] 
         public GameSession GameSession { get; set; }
 
-        public int? StunnedPlayers { get; set; }
+        public int? StunnedCharacters { get; set; }
         
         public int? CapturedFlags { get; set; }
         

@@ -15,7 +15,7 @@ namespace Grasshoppers.Queries
             var db = DbSingletone.Access;
 
             var queryResult = (from inventoryEntry in db.Inventories
-                where inventoryEntry.PlayerId == CharacterId
+                where inventoryEntry.CharacterId == CharacterId
                 select inventoryEntry.Item).ToList();
 
             var itemStore = new ListStore(typeof(string), typeof(string), typeof(ItemRarity), typeof(string));

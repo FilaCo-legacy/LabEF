@@ -6,7 +6,7 @@ namespace Grasshoppers.Models
     {
         public int Id { get; set; }
         
-        public int PlayerId { get; set; }
+        public int CharacterId { get; set; }
         
         public int ItemId { get; set; }
         
