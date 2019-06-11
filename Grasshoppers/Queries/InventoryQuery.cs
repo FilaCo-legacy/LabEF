@@ -1,16 +1,28 @@
 using Gtk;
+using System.Linq;
+using Grasshoppers.Models;
 
 namespace Grasshoppers.Queries
 {
     public class InventoryQuery : IQuery
     {
-        private int _characterId;
+        public int CharacterId { get; set; }
         
         public string Name => Resources.InventoryQuery_Name;
 
         public ITreeModel Execute()
         {
-            throw new System.NotImplementedException();
+            var db = DbSingletone.Access;
+
+            var queryResult = (from inventoryEntry in db.Inventories
+                where inventoryEntry.PlayerId == CharacterId
+                select inventoryEntry.Item).ToList();
+
+            var itemStore = new ListStore(typeof(string), typeof(string), typeof(ItemRarity), typeof(string));
+
+            itemStore.AppendValues(queryResult);
+
+            return itemStore;
         }
     }
 }
