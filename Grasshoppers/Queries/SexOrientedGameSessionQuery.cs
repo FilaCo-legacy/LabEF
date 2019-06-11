@@ -2,9 +2,9 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public class InventoryGrasshoppersQuery : IGrasshoppersQuery
+    public class SexOrientedGameSessionQuery: IQuery
     {
-        public string Name => Resources.InventoryGrasshoppersQuery_Name;
+        public string Name => Resources.SexOrientedGameSessionQuery_Name;
 
         public ITreeModel Execute()
         {

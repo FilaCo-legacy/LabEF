@@ -2,9 +2,9 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public class CaptureMasterGrasshoppersQuery: IGrasshoppersQuery
+    public class FastestWinTeamQuery: IQuery
     {
-        public string Name => Resources.CaptureMasterGrasshoppersQuery_Name;
+        public string Name => Resources.FastestWinTeamQuery_Name;
 
         public ITreeModel Execute()
         {

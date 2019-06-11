@@ -38,6 +38,9 @@
       <Compile Update="Models\MissionConfiguration.cs">
         <DependentUpon>Mission.cs</DependentUpon>
       </Compile>
+      <Compile Update="Queries\InventoryQueryDialog.cs">
+        <DependentUpon>InventoryQuery.cs</DependentUpon>
+      </Compile>
     </ItemGroup>
 
 </Project>

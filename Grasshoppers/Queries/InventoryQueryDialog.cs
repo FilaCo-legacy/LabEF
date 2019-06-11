@@ -2,10 +2,12 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public class SexOrientedGameSessionGrasshoppersQuery: IGrasshoppersQuery
+    public class InventoryQueryForm : IQuery
     {
-        public string Name => Resources.SexOrientedGameSessionGrasshoppersQuery_Name;
+        private readonly InventoryQuery _query;
 
+        public string Name => _query.Name;
+        
         public ITreeModel Execute()
         {
             throw new System.NotImplementedException();

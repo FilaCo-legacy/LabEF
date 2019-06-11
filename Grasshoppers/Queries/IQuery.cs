@@ -2,7 +2,7 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public interface IGrasshoppersQuery
+    public interface IQuery
     {
         string Name { get; }
         

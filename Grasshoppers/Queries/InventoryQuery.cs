@@ -2,9 +2,11 @@ using Gtk;
 
 namespace Grasshoppers.Queries
 {
-    public class CharsOwnItemGrasshoppersQuery: IGrasshoppersQuery
+    public class InventoryQuery : IQuery
     {
-        public string Name => Resources.CharsOwnItemGrasshoppersQuery_Name;
+        private int _characterId;
+        
+        public string Name => Resources.InventoryQuery_Name;
 
         public ITreeModel Execute()
         {

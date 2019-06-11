@@ -46,51 +46,51 @@ namespace Grasshoppers {
             }
         }
         
-        public static string InventoryGrasshoppersQuery_Name {
+        public static string InventoryQuery_Name {
             get {
-                return ResourceManager.GetString("InventoryGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("InventoryQuery_Name", resourceCulture);
             }
         }
         
-        public static string MostFreqPlayedMissionGrasshoppersQueryIGrasshoppersQuery_Name {
+        public static string MostFreqPlayedMissionQuery_Name {
             get {
-                return ResourceManager.GetString("MostFreqPlayedMissionGrasshoppersQueryIGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("MostFreqPlayedMissionQuery_Name", resourceCulture);
             }
         }
         
-        public static string GameSessionMvpGrasshoppersQuery_Name {
+        public static string GameSessionMvpQuery_Name {
             get {
-                return ResourceManager.GetString("GameSessionMvpGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("GameSessionMvpQuery_Name", resourceCulture);
             }
         }
         
-        public static string CharsOwnItemGrasshoppersQuery_Name {
+        public static string CharsOwnItemQuery_Name {
             get {
-                return ResourceManager.GetString("CharsOwnItemGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("CharsOwnItemQuery_Name", resourceCulture);
             }
         }
         
-        public static string SexOrientedGameSessionGrasshoppersQuery_Name {
+        public static string SexOrientedGameSessionQuery_Name {
             get {
-                return ResourceManager.GetString("SexOrientedGameSessionGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("SexOrientedGameSessionQuery_Name", resourceCulture);
             }
         }
         
-        public static string CaptureMasterGrasshoppersQuery_Name {
+        public static string CaptureMasterQuery_Name {
             get {
-                return ResourceManager.GetString("CaptureMasterGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("CaptureMasterQuery_Name", resourceCulture);
             }
         }
         
-        public static string FastestWinTeamGrasshoppersQuery_Name {
+        public static string FastestWinTeamQuery_Name {
             get {
-                return ResourceManager.GetString("FastestWinTeamGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("FastestWinTeamQuery_Name", resourceCulture);
             }
         }
         
-        public static string StunMasterGrasshoppersQuery_Name {
+        public static string StunMasterQuery_Name {
             get {
-                return ResourceManager.GetString("StunMasterGrasshoppersQuery_Name", resourceCulture);
+                return ResourceManager.GetString("StunMasterQuery_Name", resourceCulture);
             }
         }
     }
