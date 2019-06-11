@@ -19,6 +19,27 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="InventoryGrasshoppersQuery_Name" xml:space="preserve">
-        <value>Получить инвентарь игрока</value>
+        <value>Получить инвентарь игрока...</value>
+    </data>
+    <data name="MostFreqPlayedMissionGrasshoppersQueryIGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить миссию, в которую пользователи играли чаще всего</value>
+    </data>
+    <data name="GameSessionMvpGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить лучшего персонажа игровой сессии...</value>
+    </data>
+    <data name="CharsOwnItemGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Список персонажей, обладающих предметом...</value>
+    </data>
+    <data name="SexOrientedGameSessionGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить игровую сессию, в которой поучаствовало относительное большинство персонажей данного пола...</value>
+    </data>
+    <data name="CaptureMasterGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить персонажа, захватившего больше всего флагов за одну сессию</value>
+    </data>
+    <data name="FastestWinTeamGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить команду, победившую своих оппонентов быстрее всех</value>
+    </data>
+    <data name="StunMasterGrasshoppersQuery_Name" xml:space="preserve">
+        <value>Получить персонажа, суммарно оглушившего больше всего соперников</value>
     </data>
 </root>
